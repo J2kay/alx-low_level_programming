@@ -18,12 +18,12 @@ int main(void)
 	long long l;
 	float m;
 
-	printf("The size of a char: %lu bytes(s).", (unsigned long)sizeof(i));
-	printf("The size of an int: %lu bytes(s).", (unsigned long)sizeof(j));
-	printf("The size of a long int: %lu bytes(s).", (unsigned long)sizeof(k));
-	printf("The size of a long long int: %lu bytes(s).",
-			(unsigned long)sizeof(l));
-	printf("The size of a float: %lu bytes(s).\n", (unsigned long)sizeof(m));
+	printf("The size of a char: %hu bytes(s)\n.", (unsigned short)sizeof(i));
+	printf("The size of an int: %hu bytes(s)\n.", (unsigned short)sizeof(j));
+	printf("The size of a long int: %hu bytes(s)\n.", (unsigned short)sizeof(k));
+	printf("The size of a long long int: %hu bytes(s)\n.",
+			(unsigned short)sizeof(l));
+	printf("The size of a float: %hu bytes(s).\n", (unsigned short)sizeof(m));
 
 	return (0);
 }
