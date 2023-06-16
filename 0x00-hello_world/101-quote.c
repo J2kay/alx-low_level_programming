@@ -6,7 +6,7 @@
  * functions, performs calculations,
  * and interacts with the user.
  *
- * Return: 1 on successful execution.
+ * Return: 0 on successful execution.
  */
 #include <unistd.h>
 
