@@ -18,9 +18,10 @@ int main(void)
 
 	char letter = 'z';
 
-	while (letter <= 'a')
+	while (letter >= 'a')
 {
 	putchar(letter);
+	fflush(stdout);
 	letter--;
 }
 	putchar('\n');
