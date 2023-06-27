@@ -16,14 +16,14 @@ void puts_half(char *str)
 		n++;
 	}
 	length = n;
-/**	mid = length / 2;*/
-	if (n % 2 == 0)
- 	{
-		mid = length / 2;
+
+	if (n % 2 != 0)
+	{
+		mid = (length / 2) - 1;
 	}
 	else
 	{
-		mid = (length / 2) - 1;
+		mid = length / 2;
 	}
 
 	for (i = mid; i < length; i++)
