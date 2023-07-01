@@ -3,7 +3,7 @@
 /**
  * *cap_string - capitalizes the first letter of every word in the string
  * @a: input string array
- * Return: char 
+ * Return: char
  */
 
 char *cap_string(char *a)
