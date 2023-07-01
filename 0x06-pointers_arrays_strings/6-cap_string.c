@@ -8,15 +8,19 @@
 
 char *cap_string(char *a)
 {
-	int i;
+	int i, n;
+	char b[13] = ".,;!?\" ()\t{}\n";
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		if (a[i] == 32 || a[i] == '\n' || a[i] == 46 || a[i] == '\t')
+		for (n = 0; n < 13; n++)
 		{
+			if (b[n] == a[i])
+			{
 			if (a[i + 1] >= 97 && a[i + 1] <= 122)
 			{
 				a[i + 1] = a[i + 1] - 32;
+			}
 			}
 		}
 	}
