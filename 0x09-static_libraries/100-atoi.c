@@ -1,1 +1,8 @@
-int _atoi(char *s);
+#include "main.h"
+
+
+
+
+int _atoi(char *s)
+{
+}
