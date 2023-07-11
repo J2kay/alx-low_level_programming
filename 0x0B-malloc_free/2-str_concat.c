@@ -14,15 +14,21 @@ char *str_concat(char *s1, char *s2)
 	int i, j, k, n, len1 = 0, len2 = 0, size;
 	char *new;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	for (i = 0; s1[i] != '\0'; i++)
+	if (s1 != NULL)
 	{
-		len1++;
+		for (i = 0; s1[i] != '\0'; i++)
+		{
+			len1++;
+		}
 	}
-	for (j = 0; s2[j] != '\0'; j++)
+	if (s2 != NULL)
 	{
-		len2++;
+		for (j = 0; s2[j] != '\0'; j++)
+		{
+			len2++;
+		}
 	}
 	size = len1 + len2 + 1;
 
