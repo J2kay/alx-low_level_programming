@@ -31,9 +31,9 @@ char *str_concat(char *s1, char *s2)
 			len2++;
 		}
 	}
-	size = len1 + len2 + 1;
+	size = len1 + len2;
 
-	new = (char *)malloc(sizeof(char) * size);
+	new = (char *)malloc(sizeof(char) * size + 1);
 	for (k = 0; k < len1; k++)
 	{
 		new[k] = s1[k];
