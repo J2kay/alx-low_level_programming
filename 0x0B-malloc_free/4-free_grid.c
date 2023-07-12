@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid - free a;;ocated space
+ * free_grid - free allocated space
  * @grid: input 2d grid
  * @height: input integer
  * Return: void
