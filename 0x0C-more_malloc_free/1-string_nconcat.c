@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (k = 0; k < len1; k++)
 		new[k] = s1[k];
-	if (n >= len2 || n == 0)
+	if (n >= len2)
 		for (l = 0; l < len2; l++, k++)
 			new[k] = s2[l];
 	else
