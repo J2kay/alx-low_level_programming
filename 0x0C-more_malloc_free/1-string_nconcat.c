@@ -36,9 +36,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (k = 0; k < len1; k++)
 		new[k] = s1[k];
-	if (n >= len2)
-		for (l = 0; n >= len2 && l < size; l++, k++)
-			new[k] = s2[l];
+	for (l = 0; n >= len2 && l < size; l++, k++)
+		new[k] = s2[l];
 	for (l = 0; n < len2 && l <= n; l++, k++)
 		new[k] = s2[l];
 	return (new);
