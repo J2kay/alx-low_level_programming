@@ -21,11 +21,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len1++;
 	for (j = 0; s2[j] != '\0'; j++)
 		len2++;
-	size = len1 + len2;
+	size = len1 + len2 + 1;
 	if (n < len2)
 		new = malloc(sizeof(char) * (len1 + n + 1));
 	else
-		new = malloc(sizeof(char) * size + 1);
+		new = malloc(sizeof(char) * size);
 	if (new == NULL)
 		return (NULL);
 	for (k = 0; k < len1; k++)
