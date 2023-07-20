@@ -11,7 +11,7 @@
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int a, b;
+	int first, second;
 	char *op;
 
 	if (argc != 4)
@@ -19,20 +19,20 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	a = atoi(argv[1]);
+	first = atoi(argv[1]);
 	op = argv[2];
-	b = atoi(argv[3]);
+	second = atoi(argv[3]);
 
 	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if ((*op == '/' && b == 0) || (*op == '%' && b == 0))
+	if ((*op == '/' && second == 0) || (*op == '%' && second == 0))
 	{
 		printf("Error\n");
 		return (98);
 	}
-	printf("%d\n", get_op_func(op)(a, b));
+	printf("%d\n", get_op_func(op)(first, second));
 	return (0);
 }
