@@ -26,12 +26,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 	if ((*op == '/' && second == 0) || (*op == '%' && second == 0))
 	{
 		printf("Error\n");
-		return (98);
+		return (100);
 	}
 	printf("%d\n", get_op_func(op)(first, second));
 	return (0);
