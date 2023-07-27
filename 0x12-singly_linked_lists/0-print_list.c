@@ -11,7 +11,9 @@ size_t print_list(const list_t *h)
 	size_t tally = 0;
 
 	if (h == NULL)
-		return (1);
+	{
+		printf("Error");
+	}
 	for (i = 0; h != NULL; i++)
 		{
 		if (h->str != NULL)
