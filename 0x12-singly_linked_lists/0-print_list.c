@@ -9,18 +9,19 @@ size_t print_list(const list_t *h)
 {
 	int i;
 	size_t tally = 0;
+	const list_t *list = h;
 
-	if (h == NULL)
+	if (list == NULL)
 	{
 		return (0);
 	}
-	for (i = 0; h != NULL; i++)
+	for (i = 0; list != NULL; i++)
 		{
-		if (h->str != NULL && h->str[0] != '\0')
-			printf("[%u] %s\n", h->len, h->str);
+		if (list->str != NULL && list->str[0] != '\0')
+			printf("[%u] %s\n", list->len, list->str);
 		else
 			printf("[0] (nil)\n");
-		h = h->next;
+		list = list->next;
 		tally++;
 	}
 	return (tally);
