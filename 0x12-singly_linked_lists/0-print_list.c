@@ -17,10 +17,10 @@ size_t print_list(const list_t *h)
 	}
 	for (i = 0; list != NULL; i++)
 		{
-		if (list->str != NULL && list->str[0] != '\0')
-			printf("[%u] %s\n", list->len, list->str);
-		else
+		if (list->str == NULL || list->str[0] == '\0')
 			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", list->len, list->str);
 		list = list->next;
 		tally++;
 	}
