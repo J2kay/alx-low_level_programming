@@ -7,13 +7,6 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i, arr[100], end;
 
-	end = 99;
-	for (i = 0; i <= index && n > 0; i++)
-	{
-		arr[i] = n % 2;
-		n /= 2;
-	}
-	return (arr[i]);
+	return ((n >> index) & 1);
 }
