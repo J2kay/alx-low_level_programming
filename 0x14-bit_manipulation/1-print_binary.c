@@ -14,11 +14,12 @@ void print_binary(unsigned long int n)
 		for (i = 30; i >= 0; i--)
 		{
 			bin = (n >> i) & 1;
-			if (bin == 1)
-				print = 1;
-			if (print == 1)
+			if (bin || print)
+			{
 				_putchar(bin + '0');
+				print = 1;
+			}
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
