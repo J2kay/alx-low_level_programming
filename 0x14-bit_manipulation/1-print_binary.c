@@ -5,7 +5,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, bin, check = 0;
+	int i, bin;
 
 	for (i = sizeof(unsigned long int) * 8 - 1; i >= 0; i--)
 	{
@@ -14,4 +14,3 @@ void print_binary(unsigned long int n)
 	}
 	_putchar('\n');
 }
-
