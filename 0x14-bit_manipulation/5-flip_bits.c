@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * flip_bits calculates the number of bits
+ * flip_bits - calculates the number of bits
  *   you would nee to flip to go from n to m
  * @n: input number
  * @m: input number
