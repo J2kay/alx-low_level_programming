@@ -8,12 +8,7 @@ void print_binary(unsigned long int n)
 {
 	int i, bin, print = 0;
 
-	if (n == 0)
-	{
-		_putchar('0');
-	}
-
-	else
+	if (n != 0)
 	{
 		for (i = sizeof(unsigned long int) * 8 - 1; i >= 0; i--)
 		{
@@ -24,5 +19,9 @@ void print_binary(unsigned long int n)
 				print = 1;
 			}
 		}
+	}
+	else
+	{
+		_putchar('0');
 	}
 }
