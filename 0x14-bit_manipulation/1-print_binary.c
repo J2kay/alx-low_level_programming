@@ -24,6 +24,5 @@ void print_binary(unsigned long int n)
 				print = 1;
 			}
 		}
-		_putchar('\n');
 	}
 }
