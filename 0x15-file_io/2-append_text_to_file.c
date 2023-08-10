@@ -19,13 +19,16 @@ int append_text_to_file(const char *filename, char *text_content)
 		close(fd);
 		return (-1);
 	}
-	while (text_content[len] != '\0')
-		len++;
-	tally = write(fd, text_content, len);
-	if (tally == -1)
+	else
 	{
-		close(fd);
-		return (-1);
+		while (text_content[len] != '\0')
+			len++;
+		tally = write(fd, text_content, len);
+		if (tally == -1)
+		{
+			close(fd);
+			return (-1);
+		}
 	}
 	close(fd);
 	return (1);
