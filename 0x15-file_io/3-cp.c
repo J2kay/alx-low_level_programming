@@ -38,12 +38,12 @@ int main(int argc, char *argv[])
 	}
 	if (tally == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[1]);
+		dprintf(2, "Error: Can't read to %s\n", argv[1]);
 		exit(98);
 	}
 	if (close(fd) == -1 || close(fd1) == -1)
 	{
-		dprintf(2, "Error: Can't write to %d\n", fd);
+		dprintf(2, "Error: Can't close to %d\n", fd);
 		exit(100);
 	}
 	return (0);
