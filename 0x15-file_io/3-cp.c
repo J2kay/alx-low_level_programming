@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (close(fd) == -1 || close(fd1) == -1)
+	if (close(fd) == -1)
 	{
 		dprintf(2, "Error: Can't close fd\n");
 		exit(100);
