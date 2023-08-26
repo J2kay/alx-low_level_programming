@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	}
 	if (close(fd) == -1 || close(fd1) == -1)
 	{
-		dprintf(2, "Error: Can't close fd");
+		dprintf(2, "Error: Can't close fd\n");
 		exit(100);
 	}
 	return (0);
