@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1 || argv[1] == NULL)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(1, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd1 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	}
 	if (close(fd) == -1 || close(fd1) == -1)
 	{
-		dprintf(2, "Error: Can't close %d\n", fd);
+		dprintf(2, "Error: Can't close fd");
 		exit(100);
 	}
 	return (0);
