@@ -12,9 +12,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index_v = key_index((unsigned char *) key, ht->size);
 	hash_node_t *new_node = NULL;
 
-	if (ht == NULL || key == NULL || value == NULL)
+	if (ht == NULL || *key == '\0' || key == NULL || value == NULL)
 		return (0);
-	new_node = malloc(sizeof(hash_node_t));
+	new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
 	new_node->key = strdup(key);
